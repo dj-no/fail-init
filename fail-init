@@ -4,8 +4,8 @@ echo HELLO!!!
 echo HELLO!!!
 echo
 echo "starting dbus"
-/usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --syslog-only
-echo "starting NetworkManager"
-/usr/bin/NetworkManager --no-daemon
+/usr/bin/dbus-daemon --system --nofork --nopidfile --syslog-only
+echo "starting iwd"
+/usr/bin/iwd/iwd
 echo "entering tty"
 /sbin/agetty 9600 tty1
