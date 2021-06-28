@@ -2,5 +2,10 @@
 echo HELLO!!!
 echo HELLO!!!
 echo HELLO!!!
-setsid -f NetworkManager
+echo
+echo "starting dbus"
+/usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --syslog-only
+echo "starting NetworkManager"
+/usr/bin/NetworkManager --no-daemon
+echo "entering tty"
 /sbin/agetty 9600 tty1
