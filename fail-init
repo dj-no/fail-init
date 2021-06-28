@@ -1,0 +1,6 @@
+#!/bin/sh
+echo HELLO!!!
+echo HELLO!!!
+echo HELLO!!!
+setsid -f NetworkManager
+/sbin/agetty 9600 tty1
